@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain House Hub — Community Resource Center</title>
+  <meta name="description" content="Mountain House Hub connects residents to local food assistance, mental health services, youth programs, senior resources, employment help, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+</head>
+<body>
+  <div id="page-transition"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- ── NAV ───────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        Mountain House Hub
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="directory.html">Resources</a>
+        <a href="spotlights.html">Spotlights & Events</a>
+        <a href="submit.html">Submit</a>
+        <a href="references.html">References</a>
+        <a href="submit.html" class="nav-cta btn">Add a Resource</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────── -->
+  <section class="hero">
+    <spline-viewer
+      url="https://prod.spline.design/N08YHFLP4xBOSMwYCVjjHhyw/scene.splinecode"
+      style="position:absolute; inset:0; width:100%; height:100%; z-index:0;"
+      loading-anim-type="none">
+    </spline-viewer>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>◆</span> Mountain House, California
+      </div>
+      <h1>
+        Your Community,<br>
+        <span class="gradient-text">Your Resources</span>
+      </h1>
+      <p class="hero-sub">
+        Mountain House Hub connects residents to food assistance, mental health support, youth programs, employment services, and more — all in one place.
+      </p>
+      <div class="hero-actions">
+        <a href="directory.html" class="btn btn-primary">
+          🔍 Explore Resources
+        </a>
+        <a href="submit.html" class="btn btn-outline">
+          + Submit a Resource
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── STATS BAR ─────────────────────────────────────── -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num" data-count="15" data-suffix="+">0+</div>
+          <div class="stat-label">Local Resources</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num" data-count="6" data-suffix="">0</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num" data-count="3" data-suffix="">0</div>
+          <div class="stat-label">Featured Spotlights</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num" data-count="24" data-suffix="/7">0/7</div>
+          <div class="stat-label">Some Available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CATEGORIES ────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Browse by Category</span>
+        <h2>Find What You <span class="gold-text">Need</span></h2>
+        <p>From food assistance to emergency services, healthcare to youth programs — explore every type of resource available in Mountain House.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:900px; margin:0 auto;" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── SPOTLIGHTS PREVIEW ────────────────────────────── -->
+  <section class="section" style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Featured</span>
+        <h2>Community <span class="gradient-text">Spotlights</span></h2>
+        <p>A closer look at three organizations making a real difference in Mountain House every single day.</p>
+      </div>
+      <div class="grid-3" id="spotlightPreview"></div>
+      <div style="text-align:center; margin-top: 40px;">
+        <a href="spotlights.html" class="btn btn-gold reveal">View All Spotlights →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EVENTS PREVIEW ────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Upcoming</span>
+        <h2>Community <span class="gold-text">Events</span></h2>
+        <p>Stay connected with what's happening in Mountain House this month.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; max-width:780px; margin:0 auto;" id="eventsPreview"></div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="spotlights.html#events" class="btn btn-outline reveal">See All Events →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <span class="section-tag">Get Involved</span>
+        <h2>Know a resource we're <span class="gradient-text">missing?</span></h2>
+        <p>Help strengthen Mountain House by submitting a local organization, service, or program to our community directory.</p>
+        <div class="btn-row">
+          <a href="submit.html" class="btn btn-primary">Submit a Resource</a>
+          <a href="directory.html" class="btn btn-outline">Browse All Resources</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            <span class="logo-icon">◆</span> Mountain House Hub
+          </div>
+          <p class="footer-desc">Connecting Mountain House residents to the local resources, services, and programs they need to thrive.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="directory.html">Resource Directory</a>
+          <a href="spotlights.html">Spotlights</a>
+          <a href="events.html">Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="submit.html">Submit a Resource</a>
+          <a href="references.html">References</a>
+          <a href="tel:211">Call 2-1-1 for Help</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mountain House Hub <span class="footer-dot"></span> TSA Webmaster Competition</span>
+        <span>Built for the Mountain House Community</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────── -->
+  <script src="js/resources.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // ── Render category cards ────────────────────────────
+    const catGrid = document.getElementById('categoryGrid');
+    const displayCats = CATEGORIES.slice(1); // skip "All Resources"
+    displayCats.forEach((cat, i) => {
+      const delay = i < 4 ? `reveal-delay-${(i % 4) + 1}` : '';
+      catGrid.innerHTML += `
+        <a href="directory.html?cat=${encodeURIComponent(cat.name)}" class="category-card reveal ${delay}">
+          <div class="cat-icon">${cat.icon}</div>
+          <div class="cat-name">${cat.name}</div>
+          <div class="cat-count">${cat.count} resource${cat.count !== 1 ? 's' : ''}</div>
+        </a>`;
+    });
+
+    // ── Render spotlight preview cards ───────────────────
+    const spPreview = document.getElementById('spotlightPreview');
+    const featured  = RESOURCES.filter(r => r.featured).slice(0, 3);
+    featured.forEach((r, i) => {
+      const delay = `reveal-delay-${i + 1}`;
+      spPreview.innerHTML += `
+        <div class="resource-card reveal ${delay}">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div class="resource-icon">${r.name.slice(0,2).toUpperCase()}</div>
+            <span class="resource-category">${r.category}</span>
+          </div>
+          <div class="resource-name">${r.name}</div>
+          <div class="resource-desc">${r.description}</div>
+          <div class="resource-meta">
+            <div class="resource-meta-item"><span class="meta-icon">◷</span>${r.hours}</div>
+            <div class="resource-meta-item"><span class="meta-icon">◎</span>${r.address}</div>
+          </div>
+          <a href="spotlights.html#spotlight-${r.id}" class="btn btn-outline btn-sm" style="margin-top:4px;">Learn More →</a>
+        </div>`;
+    });
+
+    // ── Render events preview ────────────────────────────
+    const evPreview = document.getElementById('eventsPreview');
+    const previewEvents = [
+      { month:'MAY', day:'3',  name:'Tracy Interfaith Ministries Food Pantry', loc:'311 W Grant Line Rd, Tracy',       badge:'badge-free', label:'Free' },
+      { month:'MAY', day:'8',  name:'Community Safety & CPR Training',         loc:'Tracy Fire Department, Tracy',     badge:'badge-free', label:'Free' },
+      { month:'MAY', day:'10', name:'Royal Kings Basketball Tryouts',           loc:'52 Fauna Court, Mountain House',   badge:'badge-free', label:'Free' },
+    ];
+    previewEvents.forEach((ev, i) => {
+      evPreview.innerHTML += `
+        <div class="event-card reveal reveal-delay-${i+1}">
+          <div class="event-date">
+            <div class="event-month">${ev.month}</div>
+            <div class="event-day">${ev.day}</div>
+          </div>
+          <div>
+            <div class="event-name">${ev.name}</div>
+            <div class="event-meta">📍 ${ev.loc}</div>
+          </div>
+          <span class="event-badge ${ev.badge}">${ev.label}</span>
+        </div>`;
+    });
+  </script>
+</body>
+</html>

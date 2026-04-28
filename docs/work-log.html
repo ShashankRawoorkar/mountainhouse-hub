@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Team Work Log — Mountain House Hub</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; font-size: 11pt; color: #000; background: #fff; padding: 40px; max-width: 900px; margin: 0 auto; }
+
+  .header { text-align: center; margin-bottom: 24px; border-bottom: 2px solid #000; padding-bottom: 14px; }
+  .header h1 { font-size: 15pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .header h2 { font-size: 12pt; font-weight: normal; margin-bottom: 10px; }
+
+  .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 20px; border: 1px solid #000; }
+  .meta-row { display: contents; }
+  .meta-cell { border: 1px solid #000; padding: 6px 10px; font-size: 10.5pt; }
+  .meta-cell span { font-weight: bold; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+  thead tr { background: #1a1a2e; color: #fff; }
+  thead th { padding: 8px 10px; font-size: 10pt; font-weight: bold; text-align: left; border: 1px solid #000; }
+  tbody tr:nth-child(even) { background: #f5f5f5; }
+  tbody td { padding: 6px 10px; font-size: 9.5pt; border: 1px solid #ccc; vertical-align: top; line-height: 1.4; }
+  .td-hours { text-align: center; font-weight: bold; }
+  .td-name { white-space: nowrap; }
+
+  .totals { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  .totals th { background: #2c2c4e; color: #fff; padding: 7px 10px; font-size: 10pt; text-align: left; border: 1px solid #000; }
+  .totals td { padding: 6px 10px; font-size: 10pt; border: 1px solid #ccc; }
+  .totals td.hrs { text-align: center; font-weight: bold; }
+
+  .signature-section { margin-top: 32px; border-top: 1px solid #ccc; padding-top: 20px; }
+  .signature-section h3 { font-size: 11pt; font-weight: bold; margin-bottom: 16px; }
+  .sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 48px; }
+  .sig-item { border-top: 1px solid #000; padding-top: 4px; font-size: 9.5pt; }
+  .sig-item .label { color: #444; font-size: 8.5pt; margin-top: 2px; }
+
+  .footer-note { margin-top: 28px; font-size: 9pt; color: #555; border-top: 1px solid #ddd; padding-top: 10px; text-align: center; }
+
+  @media print {
+    body { padding: 20px; }
+    thead tr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .totals th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Technology Student Association</h1>
+  <h2>Team Work Log — Webmaster Event</h2>
+  <div style="font-size:10pt; margin-top:6px;">2025–2026 High School Competitive Events</div>
+</div>
+
+<div class="meta">
+  <div class="meta-cell"><span>Event:</span> Webmaster</div>
+  <div class="meta-cell"><span>Project:</span> Mountain House Hub — Community Resource Hub</div>
+  <div class="meta-cell"><span>Chapter / School:</span> Mountain House High School</div>
+  <div class="meta-cell"><span>State:</span> California</div>
+  <div class="meta-cell"><span>Team Size:</span> 6 Members</div>
+  <div class="meta-cell"><span>Conference Level:</span> Regional</div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:70px;">Date</th>
+      <th style="width:160px;">Team Member</th>
+      <th>Work Completed</th>
+      <th style="width:60px;">Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- ── Week 1: April 1–5 ── -->
+    <tr>
+      <td>4/1/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Set up project folder structure, created base HTML template, linked CSS and JS files, established consistent navigation across all pages.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/1/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Researched Spline 3D design platform; tested multiple 3D scenes for visual fit; selected homepage city navigation scene and city view scene for directory page.</td>
+      <td class="td-hours">2</td>
+    </tr>
+    <tr>
+      <td>4/1/26</td>
+      <td class="td-name">Ansh Suba</td>
+      <td>Researched community resources in Tracy and Mountain House area; compiled initial list of organizations with addresses, phone numbers, and hours.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/2/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Built full CSS stylesheet including color variables, typography, responsive grid system (grid-3, grid-4), card components, and button styles.</td>
+      <td class="td-hours">4</td>
+    </tr>
+    <tr>
+      <td>4/2/26</td>
+      <td class="td-name">Shashank Rawoorkar</td>
+      <td>Drafted submit-a-resource form layout; identified all required fields (name, category, description, address, phone, hours, submitter info).</td>
+      <td class="td-hours">2</td>
+    </tr>
+    <tr>
+      <td>4/2/26</td>
+      <td class="td-name">Shuvam Kumar Das</td>
+      <td>Researched TSA Webmaster event guidelines; reviewed rubric criteria; outlined which pages and features are required for full credit.</td>
+      <td class="td-hours">2</td>
+    </tr>
+    <tr>
+      <td>4/3/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Integrated Spline 3D city navigation iframe into homepage hero section; configured iframe positioning, z-index layering, and fallback background.</td>
+      <td class="td-hours">4</td>
+    </tr>
+    <tr>
+      <td>4/3/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Built resources.js data file with all community resource entries including name, category, description, address, phone, hours, website, tags, and featured flags.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/3/26</td>
+      <td class="td-name">Ayush Deshpande</td>
+      <td>Verified phone numbers, addresses, and operating hours for all resources by cross-checking organization websites and Google Maps listings.</td>
+      <td class="td-hours">3</td>
+    </tr>
+
+    <!-- ── Week 2: April 6–12 ── -->
+    <tr>
+      <td>4/6/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Built interactive resource directory page (directory.html) with real-time search input, category filter buttons, and A–Z / category sort dropdown.</td>
+      <td class="td-hours">4</td>
+    </tr>
+    <tr>
+      <td>4/6/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Designed and applied dark color scheme with green and gold accent variables; created gradient overlays for Spline hero sections to ensure text readability.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/6/26</td>
+      <td class="td-name">Ansh Suba</td>
+      <td>Wrote descriptions for all 8 community resources; crafted spotlight "About" and "How to Access" sections for the 3 featured organizations.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/7/26</td>
+      <td class="td-name">Shashank Rawoorkar</td>
+      <td>Built submit.html form with HTML5 validation, JavaScript error and success banners, and sticky sidebar with submission guidelines.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/7/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Developed main.js with scroll-triggered reveal animations, scroll progress bar, page transition overlay, animated stat counters, and mobile hamburger nav.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/7/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Integrated second Spline city view scene into resource directory page hero; adjusted gradient overlays and padding for shorter hero height.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/8/26</td>
+      <td class="td-name">Ansh Suba</td>
+      <td>Built spotlights.html with tabbed interface (Spotlights / Events); coded spotlight card rendering from featured RESOURCES data; wrote event listings for May and June 2026.</td>
+      <td class="td-hours">4</td>
+    </tr>
+    <tr>
+      <td>4/8/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Built homepage (index.html): stats bar with animated counters, category grid from CATEGORIES data, spotlight preview cards, events preview section, and CTA banner.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/9/26</td>
+      <td class="td-name">Shuvam Kumar Das</td>
+      <td>Styled resource cards, category cards, event cards, and spotlight cards with hover states, border accents, and icon elements.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/9/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Created CSS animations including page transitions, hero text reveal, badge pulse, and scroll-triggered card animations for polished user experience.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/9/26</td>
+      <td class="td-name">Ayush Deshpande</td>
+      <td>Assisted with mobile navigation implementation; tested hamburger menu behavior on various screen sizes; fixed nav link display on small screens.</td>
+      <td class="td-hours">2</td>
+    </tr>
+
+    <!-- ── Week 3: April 13–19 ── -->
+    <tr>
+      <td>4/13/26</td>
+      <td class="td-name">Ansh Suba</td>
+      <td>Built recurring programs section; wrote descriptions for all 6 recurring program cards; reviewed and edited all event listing content for accuracy.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/13/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Updated all resource data across both project folders with new community organizations; updated category filter system, SVG icons, and CATEGORIES array to match.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/13/26</td>
+      <td class="td-name">Shashank Rawoorkar</td>
+      <td>Built references.html with structured citation list for all 8 community resources; added design and development references; wrote framework statement.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/14/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Mobile responsiveness pass on Spline hero sections; adjusted iframe scaling and gradient overlays for small screens; verified hero layout on mobile viewport.</td>
+      <td class="td-hours">2</td>
+    </tr>
+    <tr>
+      <td>4/14/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Fixed homepage stats bar counts and category description text; updated events preview section with current event data; corrected submit form category dropdown.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/15/26</td>
+      <td class="td-name">Ansh Suba</td>
+      <td>Proofread all page content across the site for spelling, grammar, and factual accuracy; corrected minor errors found in event descriptions and resource listings.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/15/26</td>
+      <td class="td-name">Shuvam Kumar Das</td>
+      <td>Designed footer layout with navigation columns and brand statement; polished spacing, typography, and footer-bottom legal line.</td>
+      <td class="td-hours">2</td>
+    </tr>
+    <tr>
+      <td>4/16/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Full site debugging pass: fixed filter rendering, resolved card animation timing, corrected URL parameter handling for category deep-links, verified all internal links.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/16/26</td>
+      <td class="td-name">Ayush Deshpande</td>
+      <td>Cross-browser compatibility testing in Chrome, Firefox, and Safari; logged and reported display inconsistencies; confirmed site renders correctly on all tested browsers.</td>
+      <td class="td-hours">2</td>
+    </tr>
+    <tr>
+      <td>4/17/26</td>
+      <td class="td-name">Shuvam Kumar Das</td>
+      <td>Contributed to spotlight "About" section copy for Royal Kings Basketball Club and Tracy Interfaith Ministries entries.</td>
+      <td class="td-hours">3</td>
+    </tr>
+    <tr>
+      <td>4/17/26</td>
+      <td class="td-name">Sourya Tadapaneni</td>
+      <td>Final review of all pages; ensured consistent branding, navigation active states, and responsive behavior; prepared both project folders for submission.</td>
+      <td class="td-hours">4</td>
+    </tr>
+    <tr>
+      <td>4/17/26</td>
+      <td class="td-name">Dilshaan Sahota</td>
+      <td>Visual QA pass across all pages; verified color consistency, icon rendering, and gradient effects; confirmed Spline scenes load correctly in live environment.</td>
+      <td class="td-hours">3</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<!-- Totals -->
+<table class="totals">
+  <thead>
+    <tr>
+      <th style="width:220px;">Team Member</th>
+      <th>Primary Contributions</th>
+      <th style="width:80px;">Total Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sourya Tadapaneni</strong></td>
+      <td>Project lead; HTML/CSS framework, resources.js, interactive directory, main.js animations, homepage build, debugging, final deployment prep</td>
+      <td class="hrs">30</td>
+    </tr>
+    <tr>
+      <td><strong>Dilshaan Sahota</strong></td>
+      <td>Spline 3D integration (homepage hero + directory hero), color scheme design, CSS animations, mobile responsiveness for hero sections, visual QA</td>
+      <td class="hrs">20</td>
+    </tr>
+    <tr>
+      <td><strong>Ansh Suba</strong></td>
+      <td>Resource content writing, spotlight sections, spotlights/events page build, recurring programs, proofreading</td>
+      <td class="hrs">16</td>
+    </tr>
+    <tr>
+      <td><strong>Shashank Rawoorkar</strong></td>
+      <td>Submit form build and validation, references page, citation formatting</td>
+      <td class="hrs">10</td>
+    </tr>
+    <tr>
+      <td><strong>Ayush Deshpande</strong></td>
+      <td>Resource data verification, mobile navigation, cross-browser testing</td>
+      <td class="hrs">9</td>
+    </tr>
+    <tr>
+      <td><strong>Shuvam Kumar Das</strong></td>
+      <td>Card and component styling, footer design, spotlight copy contributions, rubric review</td>
+      <td class="hrs">10</td>
+    </tr>
+    <tr style="background:#f0f0f0;">
+      <td colspan="2" style="text-align:right; font-weight:bold; padding-right:16px;">TOTAL TEAM HOURS</td>
+      <td class="hrs" style="font-size:12pt;">95</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Signatures -->
+<div class="signature-section">
+  <h3>Team Member Signatures</h3>
+  <p style="font-size:9pt; color:#555; margin-bottom:18px;">By signing below, each team member certifies that the work log entries attributed to them are accurate and complete.</p>
+  <div class="sig-grid">
+    <div class="sig-item">
+      <div style="height:36px;"></div>
+      <div>Sourya Tadapaneni</div>
+      <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+    </div>
+    <div class="sig-item">
+      <div style="height:36px;"></div>
+      <div>Dilshaan Sahota</div>
+      <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+    </div>
+    <div class="sig-item">
+      <div style="height:36px;"></div>
+      <div>Ansh Suba</div>
+      <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+    </div>
+    <div class="sig-item">
+      <div style="height:36px;"></div>
+      <div>Shashank Rawoorkar</div>
+      <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+    </div>
+    <div class="sig-item">
+      <div style="height:36px;"></div>
+      <div>Ayush Deshpande</div>
+      <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+    </div>
+    <div class="sig-item">
+      <div style="height:36px;"></div>
+      <div>Shuvam Kumar Das</div>
+      <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+    </div>
+  </div>
+
+  <div style="margin-top:32px; border-top: 1px solid #000; padding-top:8px;">
+    <div style="height:36px;"></div>
+    <div>Chapter Advisor Signature</div>
+    <div class="label">Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date</div>
+  </div>
+</div>
+
+<div class="footer-note">
+  Mountain House Hub — TSA Webmaster 2025–2026 &nbsp;|&nbsp; Team Work Log &nbsp;|&nbsp; California Region
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Events — Mountain House Hub</title>
+  <meta name="description" content="Upcoming community events, programs, and activities in Mountain House, CA. Stay connected and get involved." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>location.replace('spotlights.html#events');</script>
+</head>
+<body>
+  <div id="page-transition"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- ── NAV ───────────────────────────────────────────── -->
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        Mountain House Hub
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Resources</a>
+        <a href="spotlights.html">Spotlights</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="submit.html">Submit</a>
+        <a href="references.html">References</a>
+        <a href="submit.html" class="nav-cta btn">Add a Resource</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HERO ─────────────────────────────────────── -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag">Get Involved</span>
+      <h1>Community <span class="gradient-text">Events</span></h1>
+      <p>Stay connected with upcoming programs, workshops, drives, and activities happening in and around Mountain House.</p>
+    </div>
+  </div>
+
+  <!-- ── EVENTS ─────────────────────────────────────────── -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+
+      <!-- Month label -->
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;" class="reveal">
+        <h2 style="font-size:1.3rem; color:var(--gold);">May 2026</h2>
+        <div style="flex:1; height:1px; background:var(--border);"></div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:56px;" id="mayEvents"></div>
+
+      <!-- Month label -->
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;" class="reveal">
+        <h2 style="font-size:1.3rem; color:var(--gold);">June 2026</h2>
+        <div style="flex:1; height:1px; background:var(--border);"></div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:56px;" id="juneEvents"></div>
+
+      <!-- Recurring programs -->
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:28px;" class="reveal">
+        <h2 style="font-size:1.3rem; color:var(--green);">Recurring Programs</h2>
+        <div style="flex:1; height:1px; background:var(--border);"></div>
+      </div>
+
+      <div class="grid-3" id="recurringPrograms"></div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────── -->
+  <section style="padding:0 0 90px;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <span class="section-tag">Know About an Event?</span>
+        <h2>Help us keep the community <span class="gold-text">informed</span></h2>
+        <p>Submit a community resource or event to be featured on Mountain House Hub.</p>
+        <div class="btn-row">
+          <a href="submit.html" class="btn btn-primary">Submit a Resource</a>
+          <a href="directory.html" class="btn btn-outline">Browse Resources</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand"><span class="logo-icon">◆</span> Mountain House Hub</div>
+          <p class="footer-desc">Connecting Mountain House residents to local resources and services.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="directory.html">Resource Directory</a>
+          <a href="spotlights.html">Spotlights</a>
+          <a href="events.html">Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="submit.html">Submit a Resource</a>
+          <a href="references.html">References</a>
+          <a href="tel:211">Call 2-1-1 for Help</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mountain House Hub <span class="footer-dot"></span> TSA Webmaster Competition</span>
+        <span>Built for the Mountain House Community</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────── -->
+  <script src="js/main.js"></script>
+  <script>
+    const mayEvents = [
+      { day:'3',  name:'Tracy Interfaith Ministries Food Pantry',    loc:'311 W Grant Line Rd, Tracy',       time:'10:00 AM – 2:00 PM', badge:'badge-free', label:'Free', icon:'🥫', desc:'Monthly food pantry and clothing assistance open to all residents in need. No appointment required.' },
+      { day:'8',  name:'Community Safety & CPR Training',            loc:'Tracy Fire Department, Tracy',     time:'10:00 AM – 12:00 PM',badge:'badge-free', label:'Free', icon:'🚒', desc:'Free CPR/first aid certification workshop hosted by the Tracy Fire Department. Open to all ages.' },
+      { day:'10', name:'Royal Kings Basketball Tryouts',             loc:'52 Fauna Court, Mountain House',   time:'10:00 AM – 1:00 PM', badge:'badge-free', label:'Free', icon:'🏀', desc:'Open tryouts for boys and girls youth travel basketball teams. All skill levels welcome.' },
+      { day:'15', name:'Community Health Screening',                 loc:'Community Medical Centers, Tracy', time:'9:00 AM – 12:00 PM', badge:'badge-free', label:'Free', icon:'⚕️', desc:'Free blood pressure, glucose, and BMI screenings by Community Medical Centers. No appointment needed.' },
+      { day:'17', name:'Mountain House Community Center Spring Fair', loc:'655 S Central Pkwy, Mountain House',time:'11:00 AM – 3:00 PM',badge:'badge-free', label:'Free', icon:'🏘️', desc:'Annual spring community fair with activities, program sign-ups, and resources for all residents.' },
+      { day:'22', name:'Neighborhood Watch Info Night',              loc:'1000 Civic Center Dr, Tracy',      time:'6:00 PM – 8:00 PM',  badge:'badge-free', label:'Free', icon:'🚔', desc:'Learn how to start or join a neighborhood watch program. Hosted by the Tracy Police Department.' },
+      { day:'29', name:'Hill Foundation Food Bank Distribution',     loc:'11176 W Larch Rd, Tracy',          time:'9:00 AM – 4:30 PM',  badge:'badge-free', label:'Free', icon:'🛒', desc:'Weekly grocery distribution for low-income residents. Non-perishable donations also accepted.' },
+    ];
+
+    const juneEvents = [
+      { day:'5',  name:'Crunch Fitness Community Open House',        loc:'1975 W 11th St, Tracy',            time:'8:00 AM – 12:00 PM', badge:'badge-free', label:'Free',         icon:'🏋️', desc:'Free trial classes and tours at Crunch Fitness Tracy. Try group fitness, strength training, and more.' },
+      { day:'7',  name:'Royal Kings Summer Basketball Camp Kickoff', loc:'Mountain House, CA 95391',         time:'9:00 AM – 12:00 PM', badge:'badge-reg',  label:'Registration',  icon:'🏀', desc:'Kick off summer with the Royal Kings! Skills clinics and team activities for all registered players.' },
+      { day:'12', name:'Tracy Interfaith Clothing Drive',            loc:'311 W Grant Line Rd, Tracy',       time:'10:00 AM – 2:00 PM', badge:'badge-free', label:'Free',         icon:'🥫', desc:'Drop off or pick up clothing and household items. Emergency assistance also available during this event.' },
+      { day:'21', name:'Hill Foundation Food Bank Distribution',     loc:'11176 W Larch Rd, Tracy',          time:'9:00 AM – 4:30 PM',  badge:'badge-free', label:'Free',         icon:'🛒', desc:'Monthly food bank distribution. All low-income residents welcome. Bring a bag or box.' },
+      { day:'28', name:'Community Safety Fair',                      loc:'Mountain House Community Center',  time:'11:00 AM – 3:00 PM', badge:'badge-free', label:'Free',         icon:'🚒', desc:'Tracy Fire & Police departments host a summer safety fair with demonstrations, resources, and giveaways.' },
+    ];
+
+    const recurring = [
+      { icon:'🥫', name:'Tracy Interfaith Food Pantry',    freq:'Mon – Thu & Sat', time:'10AM – 2PM',  loc:'311 W Grant Line Rd, Tracy',        color:'var(--green)' },
+      { icon:'🛒', name:'Hill Foundation Food Bank',       freq:'Every Wednesday', time:'9AM – 4:30PM',loc:'11176 W Larch Rd, Tracy',            color:'var(--green)' },
+      { icon:'🏀', name:'Royal Kings Basketball Practice', freq:'Varies by team',  time:'See website', loc:'Mountain House, CA 95391',           color:'var(--gold)'  },
+      { icon:'🏋️', name:'Crunch Fitness Group Classes',   freq:'Daily',           time:'4AM – 11PM',  loc:'1975 W 11th St, Tracy',              color:'var(--gold)'  },
+      { icon:'⚕️', name:'Community Medical Centers',      freq:'Mon – Fri',       time:'8AM – 5PM',   loc:'Multiple locations, Tracy & Stockton',color:'var(--green)' },
+      { icon:'🏘️', name:'Mountain House Community Center',freq:'Daily',           time:'6AM – 10PM',  loc:'655 S Central Pkwy, Mountain House',  color:'var(--gold)'  },
+    ];
+
+    function renderEvents(events, containerId) {
+      const container = document.getElementById(containerId);
+      events.forEach((ev, i) => {
+        container.innerHTML += `
+          <div class="event-card reveal reveal-delay-${(i % 4) + 1}">
+            <div class="event-date">
+              <div class="event-month">${containerId === 'mayEvents' ? 'MAY' : 'JUN'}</div>
+              <div class="event-day">${ev.day}</div>
+            </div>
+            <div>
+              <div class="event-name">${ev.icon} ${ev.name}</div>
+              <div class="event-meta">🕒 ${ev.time} &nbsp;·&nbsp; 📍 ${ev.loc}</div>
+              <div class="event-meta" style="margin-top:4px; font-size:0.8rem;">${ev.desc}</div>
+            </div>
+            <span class="event-badge ${ev.badge}">${ev.label}</span>
+          </div>`;
+      });
+    }
+
+    renderEvents(mayEvents, 'mayEvents');
+    renderEvents(juneEvents, 'juneEvents');
+
+    const recContainer = document.getElementById('recurringPrograms');
+    recurring.forEach((p, i) => {
+      recContainer.innerHTML += `
+        <div class="card reveal reveal-delay-${(i % 3) + 1}" style="border-color:rgba(${p.color === 'var(--green)' ? '59,130,246' : '148,163,184'},0.2);">
+          <div style="font-size:1.8rem; margin-bottom:12px;">${p.icon}</div>
+          <h3 style="font-size:1rem; margin-bottom:4px;">${p.name}</h3>
+          <p style="font-size:0.82rem; color:${p.color}; font-weight:600;">${p.freq} · ${p.time}</p>
+          <p style="font-size:0.82rem; margin-top:6px;">📍 ${p.loc}</p>
+        </div>`;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resource Directory — Mountain House Hub</title>
+  <meta name="description" content="Search and filter community resources available to Mountain House residents including food, health, housing, employment, and youth services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="page-transition"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- ── NAV ───────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">◆</span>
+        Mountain House Hub
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="directory.html" class="active">Resources</a>
+        <a href="spotlights.html">Spotlights & Events</a>
+        <a href="submit.html">Submit</a>
+        <a href="references.html">References</a>
+        <a href="submit.html" class="nav-cta btn">Add a Resource</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HERO (Spline) ────────────────────────────── -->
+  <section style="position:relative; min-height:440px; display:flex; align-items:center; overflow:hidden;">
+    <iframe
+      src="https://my.spline.design/cityview-Jamptqadn4CPwl5HDYhWJW3r/"
+      frameborder="0"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      allowfullscreen
+      loading="eager"
+      title="Interactive 3D city view"
+      style="position:absolute; inset:0; width:100%; height:100%; border:0; background:var(--bg);">
+    </iframe>
+    <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg, rgba(6,9,26,0.88) 0%, rgba(6,9,26,0.58) 38%, rgba(6,9,26,0.16) 70%, rgba(6,9,26,0.44) 100%);"></div>
+    <div style="position:absolute; inset:0; z-index:1; pointer-events:none; background:radial-gradient(ellipse at 25% 55%, rgba(59,130,246,0.16) 0%, transparent 55%), linear-gradient(180deg, rgba(6,9,26,0.55) 0%, transparent 38%, rgba(6,9,26,0.7) 100%);"></div>
+    <div class="container" style="position:relative; z-index:2; padding-top:110px; padding-bottom:64px;">
+      <span class="section-tag">Community Resources</span>
+      <h1 style="margin-top:16px; margin-bottom:16px;">Resource <span class="gradient-text">Directory</span></h1>
+      <p style="color:var(--text-muted); max-width:500px; font-size:1.05rem; line-height:1.7;">Browse, search, and filter all local resources available to Mountain House residents. Updated regularly.</p>
+    </div>
+  </section>
+
+  <!-- ── SEARCH + FILTER ───────────────────────────────── -->
+  <div class="search-section">
+    <div class="container" style="display:flex; flex-direction:column; align-items:center;">
+      <div class="search-wrap" style="max-width:600px; width:100%;">
+        <span class="search-icon">🔍</span>
+        <input
+          class="search-input"
+          id="searchInput"
+          type="text"
+          placeholder="Search resources, categories, or tags…"
+          aria-label="Search resources"
+          autocomplete="off"
+        />
+      </div>
+      <div class="filter-row" id="filterRow" style="justify-content:center;"></div>
+    </div>
+  </div>
+
+  <!-- ── RESOURCE GRID ─────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; flex-wrap:wrap; gap:12px;">
+        <p style="color:var(--text-muted); font-size:0.9rem;" id="resultsCount">Showing all 15 resources</p>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <span style="font-size:0.82rem; color:var(--text-muted);">Sort by:</span>
+          <select id="sortSelect" style="background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:6px 12px; border-radius:8px; font-size:0.83rem; font-family:inherit; outline:none; cursor:pointer;">
+            <option value="default">Default</option>
+            <option value="alpha">A – Z</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid-3" id="resourceGrid"></div>
+      <div class="no-results" id="noResults">
+        <div class="no-results-icon">🔍</div>
+        <h3 style="color:var(--text);">No results found</h3>
+        <p>Try a different search term or filter. <a href="submit.html" style="color:var(--green-light);">Know a resource we're missing? Submit it →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────── -->
+  <section style="padding: 0 0 80px;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <span class="section-tag">Help Us Grow</span>
+        <h2>Don't see what you're <span class="gold-text">looking for?</span></h2>
+        <p>Submit a resource to help your neighbors find the support they need.</p>
+        <div class="btn-row">
+          <a href="submit.html" class="btn btn-primary">Submit a Resource</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand"><span class="logo-icon">◆</span> Mountain House Hub</div>
+          <p class="footer-desc">Connecting Mountain House residents to local resources and services.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="directory.html">Resource Directory</a>
+          <a href="spotlights.html">Spotlights</a>
+          <a href="events.html">Events</a>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <a href="submit.html">Submit a Resource</a>
+          <a href="references.html">References</a>
+          <a href="tel:211">Call 2-1-1 for Help</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mountain House Hub <span class="footer-dot"></span> TSA Webmaster Competition</span>
+        <span>Built for the Mountain House Community</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ────────────────────────────────────────── -->
+  <script src="js/resources.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let activeFilter = 'All Resources';
+    let searchQuery  = '';
+    let sortMode     = 'default';
+
+    // ── Build filter buttons ─────────────────────────────
+    const filterRow = document.getElementById('filterRow');
+    CATEGORIES.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn' + (cat.name === 'All Resources' ? ' active' : '');
+      btn.textContent = cat.name;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = cat.name;
+        renderGrid();
+      });
+      filterRow.appendChild(btn);
+    });
+
+    // ── Search ──────────────────────────────────────────
+    document.getElementById('searchInput').addEventListener('input', e => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      renderGrid();
+    });
+
+    // ── Sort ────────────────────────────────────────────
+    document.getElementById('sortSelect').addEventListener('change', e => {
+      sortMode = e.target.value;
+      renderGrid();
+    });
+
+    // ── Pre-select from URL param ────────────────────────
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam  = urlParams.get('cat');
+    if (catParam) {
+      activeFilter = decodeURIComponent(catParam);
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.includes(activeFilter));
+      });
+    }
+
+    // ── Render cards ────────────────────────────────────
+    function renderGrid() {
+      const grid    = document.getElementById('resourceGrid');
+      const noRes   = document.getElementById('noResults');
+      const resCount = document.getElementById('resultsCount');
+      grid.innerHTML = '';
+
+      let filtered = RESOURCES.filter(r => {
+        const matchCat  = activeFilter === 'All Resources' || r.category === activeFilter;
+        const searchStr = `${r.name} ${r.category} ${r.description} ${r.tags.join(' ')}`.toLowerCase();
+        const matchSearch = !searchQuery || searchStr.includes(searchQuery);
+        return matchCat && matchSearch;
+      });
+
+      if (sortMode === 'alpha')    filtered.sort((a,b) => a.name.localeCompare(b.name));
+      if (sortMode === 'category') filtered.sort((a,b) => a.category.localeCompare(b.category));
+
+      if (!filtered.length) {
+        noRes.style.display = 'block';
+        resCount.textContent = 'No resources found';
+        return;
+      }
+      noRes.style.display = 'none';
+      resCount.textContent = `Showing ${filtered.length} resource${filtered.length !== 1 ? 's' : ''}`;
+
+      filtered.forEach((r, i) => {
+        const tags = r.tags.slice(0, 3).map(t => `<span class="resource-tag">${t}</span>`).join('');
+        const card = document.createElement('div');
+        card.className = 'resource-card reveal';
+        card.style.animationDelay = `${i * 0.05}s`;
+        card.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div class="resource-icon">${r.name.slice(0,2).toUpperCase()}</div>
+            <span class="resource-category">${r.category}</span>
+          </div>
+          <div class="resource-name">${r.name}</div>
+          <div class="resource-desc">${r.description}</div>
+          <div class="resource-meta">
+            <div class="resource-meta-item"><span class="meta-icon">◷</span>${r.phone}</div>
+            <div class="resource-meta-item"><span class="meta-icon">◷</span>${r.hours}</div>
+            <div class="resource-meta-item"><span class="meta-icon">◎</span>${r.address}</div>
+          </div>
+          <div class="resource-tags">${tags}</div>
+          ${r.featured ? `<a href="spotlights.html#spotlight-${r.id}" class="btn btn-outline btn-sm" style="margin-top:4px;">View Spotlight →</a>` : ''}
+        `;
+        grid.appendChild(card);
+
+        // Trigger reveal
+        requestAnimationFrame(() => {
+          setTimeout(() => card.classList.add('visible'), i * 40);
+        });
+      });
+    }
+
+    renderGrid();
+  </script>
+</body>
+</html>
